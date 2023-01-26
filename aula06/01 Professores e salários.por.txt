@@ -1,0 +1,36 @@
+programa {
+  funcao inicio() {
+    // 1: Escreva um algoritmo que leia o nome de 4 professores, a quantidade de Hora/Aula desses professores e o valor da Hora/Aula.
+    // Imprima o sal‡rio de todos os professores e imprima o professor que tem o maior sal‡rio.
+
+    // VAR
+    cadeia professores[4], nome
+    real salarios[4], valorAula, maior
+    inteiro horas
+
+    para (inteiro i = 0; i < 4; i++) {
+      escreva("Informe o nome do(a) ", i+1, "û professor(a): ")
+      leia(professores[i])
+      escreva("Quantas horas/aula este(a) professor(a) faz na semana? ")
+      leia(horas)
+      escreva("Qual o valor (em reais) da sua hora/aula? ")
+      leia(valorAula)
+      salarios[i] = (valorAula * horas)
+      se (i == 0) {
+        maior = salarios[0]
+        nome = professores[0]}
+      se (salarios[i] > maior) {
+        maior = salarios[i]
+        nome = professores[i]
+      }
+    }
+    
+    escreva("\n")
+
+    para (inteiro i = 0; i < 4; i++) {
+      escreva(professores[i], ": R$ ", salarios[i], " por semana.\n")
+    }
+
+    escreva("O(a) professor(a) com maior sal‡rio Ž ", nome, "\n")
+  }
+}

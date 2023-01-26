@@ -1,0 +1,26 @@
+programa {
+  // 4) Faça um algoritmo para gerar uma tabela de jogos de futebol. Leve em consideração que deve existir o jogo de ida e o jogo de volta.
+  // Use o conceito de vetor para resolver o exercício.
+
+  // VAR
+  cadeia times[5]
+  inteiro c = 0
+
+  funcao inicio() {
+    // INÍCIO
+    escreva("Informe o nome de 5 times de futebol: \n")
+    para (inteiro i = 0; i < 5; i++) {
+      leia(times[i])
+    }
+    escreva("\n")
+
+    para (inteiro i = 0; i < 5; i++) {
+      para (inteiro j = 0; j < 5; j++) {
+        se (i != j) {
+          c++
+          escreva(c, "˚ jogo: ", times[i], " x ", times[j], "\n")
+        }
+      }
+    }
+  }
+}

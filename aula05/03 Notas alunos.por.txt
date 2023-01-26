@@ -1,0 +1,30 @@
+programa {
+  // 3) Faça um Algoritmo para mostrar uma listagem de alunos. Leia os dados (o nome e as duas notas de prova) de 5 alunos.
+  // Use o conceito de vetor; Imprima a média da turma. Imprima os alunos que tiveram a média acima da turma.
+  // VAR
+  real notas[5], medias[5], somaMedias = 0, mediaDaTurma = 0
+  cadeia nomes[5]
+
+  funcao inicio() {
+    // INÍCIO
+    para (inteiro i = 0; i < 5; i++) {
+      escreva("Informe o nome do ", i+1, "˚ aluno(a): ")
+      leia(nomes[i])
+      escreva("Informe sua primeira nota: ")
+      leia(notas[0])
+      escreva("Informe sua segunda nota: ")
+      leia(notas[1])
+      medias[i] = (notas[0]+notas[1])/2
+      somaMedias += medias[i]
+    }
+
+    mediaDaTurma = somaMedias / 5
+
+    escreva("A média da turma é de ", mediaDaTurma, ".\nO(s) aluno(s) com notas maiores que esta média são:\n")
+    para (inteiro i = 0; i < 5; i++) {
+      se (medias[i] >= mediaDaTurma) {
+        escreva(nomes[i], "\n")
+      }
+    }
+  }
+}
